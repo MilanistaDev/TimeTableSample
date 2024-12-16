@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum SelectableStations {
+enum SelectableStations: CaseIterable {
     case ginza
     case nihombashi
 
