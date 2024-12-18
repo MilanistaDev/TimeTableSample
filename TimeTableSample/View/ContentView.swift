@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var viewModel = ContentViewModel()
     @State private var selectedStation: SelectableStations?
 
     var body: some View {
@@ -64,7 +65,8 @@ private extension ContentView {
 
     func timeTableGetButton() -> some View {
         Button {
-            // TODO: 時刻表取得APIコール
+            // 時刻表取得APIコール
+            viewModel.didTapTimeTableFetch(targetStation: selectedStation!)
         } label: {
             Text("時刻表取得")
                 .font(.headline)
