@@ -13,15 +13,13 @@ final class TimeTableAPI {
     /// - Returns: 取得できた時刻表データ
     func fetchTimeTable(targetStation: SelectableStations) async throws -> [TimeTable] {
         guard let apiUrl = generateAPIURL(targetStation: targetStation) else {
-            // TODO: エラーハンドリング
-            return []
+            throw APIError.apiURL
         }
 
         let (data, response) = try await URLSession.shared.data(from: apiUrl)
 
         guard let httpResponse = response as? HTTPURLResponse else {
-            // TODO: エラーハンドリング
-            return []
+            throw APIError.response
         }
 
         switch httpResponse.statusCode {
@@ -31,13 +29,11 @@ final class TimeTableAPI {
                 return timeTableData
 
             } catch {
-                // TODO: エラーハンドリング
-                return []
+                throw APIError.jsonDecode
             }
 
         default:
-            // TODO: エラーハンドリング
-            return []
+            throw APIError.statusCode(statusCode: httpResponse.statusCode.description)
         }
     }
 }
