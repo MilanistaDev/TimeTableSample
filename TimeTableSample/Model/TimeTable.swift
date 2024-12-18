@@ -5,6 +5,8 @@
 //  Created by Takuya Aso on 2024/12/18.
 //
 
+import Foundation
+
 /// 時刻表API全体のレスポンスを受けるモデル
 struct TimeTable: Decodable {
     var station: String

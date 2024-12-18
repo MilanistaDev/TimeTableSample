@@ -5,6 +5,8 @@
 //  Created by Takuya Aso on 2024/12/18.
 //
 
+import Foundation
+
 /// 時刻表の各時刻の情報
 struct TimeInfo: Decodable, Hashable {
     /// 発車時刻
