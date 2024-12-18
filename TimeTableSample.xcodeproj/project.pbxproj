@@ -12,6 +12,12 @@
 		19EA47F42D116E7500F4A84E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47EE2D116E7500F4A84E /* ContentView.swift */; };
 		19EA47F52D116E7500F4A84E /* SelectableStations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47EF2D116E7500F4A84E /* SelectableStations.swift */; };
 		19EA47F62D116E7500F4A84E /* TimeTableSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47F02D116E7500F4A84E /* TimeTableSampleApp.swift */; };
+		19EA47F92D12A79800F4A84E /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47F82D12A79500F4A84E /* TimeTable.swift */; };
+		19EA47FB2D12A83900F4A84E /* RailDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47FA2D12A83000F4A84E /* RailDirection.swift */; };
+		19EA47FD2D12A86900F4A84E /* DayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47FC2D12A86800F4A84E /* DayType.swift */; };
+		19EA47FF2D12A92700F4A84E /* TimeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47FE2D12A92400F4A84E /* TimeInfo.swift */; };
+		19EA48012D12A95200F4A84E /* TrainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA48002D12A95100F4A84E /* TrainType.swift */; };
+		19EA48032D12A9C000F4A84E /* DestinationStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA48022D12A9BC00F4A84E /* DestinationStation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,12 @@
 		19EA47EE2D116E7500F4A84E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19EA47EF2D116E7500F4A84E /* SelectableStations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableStations.swift; sourceTree = "<group>"; };
 		19EA47F02D116E7500F4A84E /* TimeTableSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableSampleApp.swift; sourceTree = "<group>"; };
+		19EA47F82D12A79500F4A84E /* TimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
+		19EA47FA2D12A83000F4A84E /* RailDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailDirection.swift; sourceTree = "<group>"; };
+		19EA47FC2D12A86800F4A84E /* DayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayType.swift; sourceTree = "<group>"; };
+		19EA47FE2D12A92400F4A84E /* TimeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInfo.swift; sourceTree = "<group>"; };
+		19EA48002D12A95100F4A84E /* TrainType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainType.swift; sourceTree = "<group>"; };
+		19EA48022D12A9BC00F4A84E /* DestinationStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationStation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,12 @@
 			isa = PBXGroup;
 			children = (
 				19EA47EF2D116E7500F4A84E /* SelectableStations.swift */,
+				19EA47F82D12A79500F4A84E /* TimeTable.swift */,
+				19EA47FA2D12A83000F4A84E /* RailDirection.swift */,
+				19EA47FC2D12A86800F4A84E /* DayType.swift */,
+				19EA47FE2D12A92400F4A84E /* TimeInfo.swift */,
+				19EA48002D12A95100F4A84E /* TrainType.swift */,
+				19EA48022D12A9BC00F4A84E /* DestinationStation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,9 +177,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19EA47FF2D12A92700F4A84E /* TimeInfo.swift in Sources */,
 				19EA47F42D116E7500F4A84E /* ContentView.swift in Sources */,
+				19EA48012D12A95200F4A84E /* TrainType.swift in Sources */,
+				19EA47F92D12A79800F4A84E /* TimeTable.swift in Sources */,
+				19EA47FD2D12A86900F4A84E /* DayType.swift in Sources */,
+				19EA48032D12A9C000F4A84E /* DestinationStation.swift in Sources */,
 				19EA47F52D116E7500F4A84E /* SelectableStations.swift in Sources */,
 				19EA47F62D116E7500F4A84E /* TimeTableSampleApp.swift in Sources */,
+				19EA47FB2D12A83900F4A84E /* RailDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
