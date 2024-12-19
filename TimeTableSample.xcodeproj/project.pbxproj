@@ -39,6 +39,7 @@
 		19EA48052D12AB5B00F4A84E /* TimeTableAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableAPI.swift; sourceTree = "<group>"; };
 		19EA48092D12BBA400F4A84E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		19EA480C2D12BF6200F4A84E /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		19EA48332D12CAF000F4A84E /* TimeTableSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeTableSample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 		19EA47F12D116E7500F4A84E /* TimeTableSample */ = {
 			isa = PBXGroup;
 			children = (
+				19EA48332D12CAF000F4A84E /* TimeTableSample.entitlements */,
 				19EA47F02D116E7500F4A84E /* TimeTableSampleApp.swift */,
 				19EA47ED2D116E7500F4A84E /* Assets.xcassets */,
 				19EA47EC2D116E7500F4A84E /* View */,
@@ -344,6 +346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimeTableSample/TimeTableSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TimeTableSample/Preview Content\"";
@@ -378,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimeTableSample/TimeTableSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TimeTableSample/Preview Content\"";
