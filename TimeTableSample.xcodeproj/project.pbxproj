@@ -21,6 +21,7 @@
 		19EA48062D12AB6700F4A84E /* TimeTableAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA48052D12AB5B00F4A84E /* TimeTableAPI.swift */; };
 		19EA480A2D12BBA900F4A84E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA48092D12BBA400F4A84E /* APIError.swift */; };
 		19EA480D2D12BF6600F4A84E /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA480C2D12BF6200F4A84E /* ContentViewModel.swift */; };
+		19EA48392D13FBB200F4A84E /* TimeTableDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA48382D13FBAA00F4A84E /* TimeTableDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		19EA48092D12BBA400F4A84E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		19EA480C2D12BF6200F4A84E /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		19EA48332D12CAF000F4A84E /* TimeTableSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeTableSample.entitlements; sourceTree = "<group>"; };
+		19EA48382D13FBAA00F4A84E /* TimeTableDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				19EA480B2D12BF4A00F4A84E /* ViewModel */,
 				19EA47F72D116E8900F4A84E /* Model */,
 				19EA48042D12AB2400F4A84E /* API */,
+				19EA48372D13F9E000F4A84E /* Utility */,
 				19EA47EB2D116E7500F4A84E /* Preview Content */,
 			);
 			path = TimeTableSample;
@@ -129,6 +132,14 @@
 				19EA480C2D12BF6200F4A84E /* ContentViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		19EA48372D13F9E000F4A84E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				19EA48382D13FBAA00F4A84E /* TimeTableDataManager.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 				19EA47FD2D12A86900F4A84E /* DayType.swift in Sources */,
 				19EA48032D12A9C000F4A84E /* DestinationStation.swift in Sources */,
 				19EA47F52D116E7500F4A84E /* SelectableStations.swift in Sources */,
+				19EA48392D13FBB200F4A84E /* TimeTableDataManager.swift in Sources */,
 				19EA480D2D12BF6600F4A84E /* ContentViewModel.swift in Sources */,
 				19EA47F62D116E7500F4A84E /* TimeTableSampleApp.swift in Sources */,
 				19EA47FB2D12A83900F4A84E /* RailDirection.swift in Sources */,
