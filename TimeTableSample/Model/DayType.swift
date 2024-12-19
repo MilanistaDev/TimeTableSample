@@ -8,7 +8,7 @@
 import Foundation
 
 /// 日付タイプ(平日or休日)
-enum DayType: String, Decodable, CaseIterable {
+enum DayType: String, Codable, CaseIterable {
     case weekdays = "odpt.Calendar:Weekday"
     case holidays = "odpt.Calendar:SaturdayHoliday"
     

@@ -8,7 +8,7 @@
 import Foundation
 
 /// 時刻表の各時刻の情報
-struct TimeInfo: Decodable, Hashable {
+struct TimeInfo: Codable, Hashable {
     /// 発車時刻
     var departureTime: String
     /// 列車種別

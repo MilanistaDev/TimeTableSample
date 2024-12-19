@@ -12,6 +12,7 @@ enum APIError: Error {
     case apiURL
     case response
     case noData
+    case jsonEncode
     case jsonDecode
     case statusCode(statusCode: String)
 }
@@ -30,6 +31,9 @@ extension APIError: LocalizedError {
 
         case .noData:
             return "内部エラーが発生しました。(data)"
+
+        case .jsonEncode:
+            return "内部エラーが発生しました。(パースエラー)"
 
         case .jsonDecode:
             return "内部エラーが発生しました。(パースエラー)"

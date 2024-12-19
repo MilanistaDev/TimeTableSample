@@ -25,6 +25,7 @@ final class TimeTableAPI {
         switch httpResponse.statusCode {
         case 200:
             do {
+                // MEMO: Widget連携のためにまたData型に戻すのでここでデコードしなくてもいい気がする
                 let timeTableData = try JSONDecoder().decode([TimeTable].self, from: data)
                 return timeTableData
 
