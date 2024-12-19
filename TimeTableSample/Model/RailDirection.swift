@@ -8,7 +8,7 @@
 import Foundation
 
 /// 方面情報(銀座線は渋谷方面or浅草方面)
-enum RailDirection: String, Decodable {
+enum RailDirection: String, Codable {
     case shibuya = "odpt.RailDirection:TokyoMetro.Shibuya"
     case asakusa = "odpt.RailDirection:TokyoMetro.Asakusa"
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var viewModel = ContentViewModel()
+    @StateObject private var viewModel = ContentViewModel()
     @State private var selectedStation: SelectableStations?
 
     var body: some View {
@@ -25,6 +25,10 @@ struct ContentView: View {
             .navigationTitle("時刻表取得")
             .navigationBarTitleDisplayMode(.inline)
         }
+        .alert(
+            "時刻表取得・保存が完了しました。",
+            isPresented: $viewModel.storeCompleted
+        ) { }
     }
 }
 

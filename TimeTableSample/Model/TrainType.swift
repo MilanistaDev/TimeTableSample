@@ -8,7 +8,7 @@
 import Foundation
 
 /// 列車種別(銀座線は各駅停車のみ)
-enum TrainType: String, Decodable {
+enum TrainType: String, Codable {
     case local = "odpt.TrainType:TokyoMetro.Local"
 
     var name: String {

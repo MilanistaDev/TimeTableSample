@@ -8,7 +8,7 @@
 import Foundation
 
 /// 時刻表API全体のレスポンスを受けるモデル
-struct TimeTable: Decodable {
+struct TimeTable: Codable {
     var station: String
     var railDirection: RailDirection
     var dayType: DayType
