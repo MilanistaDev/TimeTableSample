@@ -23,10 +23,40 @@ struct Provider: TimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = TimeTableEntry(date: entryDate, timeTable: [])
-            entries.append(entry)
+
+        // FIXME: 0時過ぎの時刻表が取れない＆平日・土休日がズレる＆データの作りが急造
+
+        let dateFormmater = DateFormatter()
+        dateFormmater.dateFormat = "HH:mm"
+        dateFormmater.locale = Locale(identifier: "en_US_POSIX")
+
+        // 今日が平日か土休日か
+        let dayType: DayType = Calendar.current.isDateInWeekend(currentDate) ? .holidays : .weekdays
+
+        do {
+            // 平日か土休日かのデータをフィルタ
+            let targetData = try TimeTableDataManager().getTimeTableData()
+                .filter( { $0.dayType == dayType })
+
+            // 15分ごとにデータを作ってタイムライン用の配列に格納
+            for offset in 0 ..< 4 {
+                let entryDate = Calendar.current.date(byAdding: .minute, value: 15 * offset, to: currentDate)!
+                // 時刻表データでentryDateに近いものを最大3つピックアップ
+                var filteredTimeTable: [TimeTable] = []
+                for data in targetData {
+                    let timeTable = data.timeTable.filter( { dateFormmater.date(from: $0.departureTime)! > dateFormmater.date(from: dateFormmater.string(from: entryDate))! }).prefix(3)
+                    filteredTimeTable.append(TimeTable(station: data.station, railDirection: data.railDirection, dayType: data.dayType, timeTable: Array(timeTable)))
+                }
+                let entry = TimeTableEntry(date: entryDate, timeTable: filteredTimeTable)
+                entries.append(entry)
+            }
+
+            // entries分の表示が終わったら再度タイムライン用のデータを作る
+            let timeline = Timeline(entries: entries, policy: .atEnd)
+            completion(timeline)
+
+        } catch {
+            // TODO: エラーハンドリング
         }
     }
 
