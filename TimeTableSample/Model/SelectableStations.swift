@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-enum SelectableStations: CaseIterable {
-    case ginza
-    case nihombashi
+enum SelectableStations: String, Codable, CaseIterable {
+    case ginza = "odpt.Station:TokyoMetro.Ginza.Ginza"
+    case nihombashi = "odpt.Station:TokyoMetro.Ginza.Nihombashi"
 
     var name: String {
         switch self {
