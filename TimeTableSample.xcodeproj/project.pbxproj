@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19E6AAB62D152E5700603813 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E6AAB52D152E5700603813 /* WidgetKit.framework */; };
+		19E6AAB82D152E5700603813 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E6AAB72D152E5700603813 /* SwiftUI.framework */; };
+		19E6AAC32D152E5900603813 /* TimeTableSampleWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 19E6AAB32D152E5700603813 /* TimeTableSampleWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		19EA47F22D116E7500F4A84E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EA47EA2D116E7500F4A84E /* Preview Assets.xcassets */; };
 		19EA47F32D116E7500F4A84E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EA47ED2D116E7500F4A84E /* Assets.xcassets */; };
 		19EA47F42D116E7500F4A84E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47EE2D116E7500F4A84E /* ContentView.swift */; };
@@ -24,8 +27,35 @@
 		19EA48392D13FBB200F4A84E /* TimeTableDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA48382D13FBAA00F4A84E /* TimeTableDataManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		19E6AAC12D152E5900603813 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19C4132A2D0737CB00078CBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19E6AAB22D152E5700603813;
+			remoteInfo = TimeTableSampleWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19E6AAC42D152E5900603813 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				19E6AAC32D152E5900603813 /* TimeTableSampleWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		19C413322D0737CB00078CBA /* TimeTableSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTableSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19E6AAB32D152E5700603813 /* TimeTableSampleWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TimeTableSampleWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		19E6AAB52D152E5700603813 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		19E6AAB72D152E5700603813 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		19EA47EA2D116E7500F4A84E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19EA47ED2D116E7500F4A84E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19EA47EE2D116E7500F4A84E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,11 +74,41 @@
 		19EA48382D13FBAA00F4A84E /* TimeTableDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		19E6AAC72D152E5900603813 /* Exceptions for "TimeTableSampleWidgets" folder in "TimeTableSampleWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 19E6AAB22D152E5700603813 /* TimeTableSampleWidgetsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		19E6AAB92D152E5700603813 /* TimeTableSampleWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				19E6AAC72D152E5900603813 /* Exceptions for "TimeTableSampleWidgets" folder in "TimeTableSampleWidgetsExtension" target */,
+			);
+			path = TimeTableSampleWidgets;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		19C4132F2D0737CB00078CBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19E6AAB02D152E5700603813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19E6AAB82D152E5700603813 /* SwiftUI.framework in Frameworks */,
+				19E6AAB62D152E5700603813 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				19EA47F12D116E7500F4A84E /* TimeTableSample */,
+				19E6AAB92D152E5700603813 /* TimeTableSampleWidgets */,
+				19E6AAB42D152E5700603813 /* Frameworks */,
 				19C413332D0737CB00078CBA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,8 +129,18 @@
 			isa = PBXGroup;
 			children = (
 				19C413322D0737CB00078CBA /* TimeTableSample.app */,
+				19E6AAB32D152E5700603813 /* TimeTableSampleWidgetsExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		19E6AAB42D152E5700603813 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19E6AAB52D152E5700603813 /* WidgetKit.framework */,
+				19E6AAB72D152E5700603813 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		19EA47EB2D116E7500F4A84E /* Preview Content */ = {
@@ -152,10 +224,12 @@
 				19C4132E2D0737CB00078CBA /* Sources */,
 				19C4132F2D0737CB00078CBA /* Frameworks */,
 				19C413302D0737CB00078CBA /* Resources */,
+				19E6AAC42D152E5900603813 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				19E6AAC22D152E5900603813 /* PBXTargetDependency */,
 			);
 			name = TimeTableSample;
 			packageProductDependencies = (
@@ -163,6 +237,28 @@
 			productName = TimeTableSample;
 			productReference = 19C413322D0737CB00078CBA /* TimeTableSample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		19E6AAB22D152E5700603813 /* TimeTableSampleWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19E6AAC82D152E5900603813 /* Build configuration list for PBXNativeTarget "TimeTableSampleWidgetsExtension" */;
+			buildPhases = (
+				19E6AAAF2D152E5700603813 /* Sources */,
+				19E6AAB02D152E5700603813 /* Frameworks */,
+				19E6AAB12D152E5700603813 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				19E6AAB92D152E5700603813 /* TimeTableSampleWidgets */,
+			);
+			name = TimeTableSampleWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = TimeTableSampleWidgetsExtension;
+			productReference = 19E6AAB32D152E5700603813 /* TimeTableSampleWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -175,6 +271,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					19C413312D0737CB00078CBA = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					19E6AAB22D152E5700603813 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -194,6 +293,7 @@
 			projectRoot = "";
 			targets = (
 				19C413312D0737CB00078CBA /* TimeTableSample */,
+				19E6AAB22D152E5700603813 /* TimeTableSampleWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +305,13 @@
 			files = (
 				19EA47F22D116E7500F4A84E /* Preview Assets.xcassets in Resources */,
 				19EA47F32D116E7500F4A84E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19E6AAB12D152E5700603813 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +338,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19E6AAAF2D152E5700603813 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19E6AAC22D152E5900603813 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19E6AAB22D152E5700603813 /* TimeTableSampleWidgetsExtension */;
+			targetProxy = 19E6AAC12D152E5900603813 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		19C4133E2D0737CC00078CBA /* Debug */ = {
@@ -423,6 +545,62 @@
 			};
 			name = Release;
 		};
+		19E6AAC52D152E5900603813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7M7ZGYSAKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeTableSampleWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TimeTableSampleWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.TimeTableSample.TimeTableSampleWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19E6AAC62D152E5900603813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7M7ZGYSAKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeTableSampleWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TimeTableSampleWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ASTK.TimeTableSample.TimeTableSampleWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -440,6 +618,15 @@
 			buildConfigurations = (
 				19C413412D0737CC00078CBA /* Debug */,
 				19C413422D0737CC00078CBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19E6AAC82D152E5900603813 /* Build configuration list for PBXNativeTarget "TimeTableSampleWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19E6AAC52D152E5900603813 /* Debug */,
+				19E6AAC62D152E5900603813 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
