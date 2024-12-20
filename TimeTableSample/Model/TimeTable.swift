@@ -9,7 +9,7 @@ import Foundation
 
 /// 時刻表API全体のレスポンスを受けるモデル
 struct TimeTable: Codable {
-    var station: String
+    var station: SelectableStations
     var railDirection: RailDirection
     var dayType: DayType
     var timeTable: [TimeInfo]

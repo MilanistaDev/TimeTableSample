@@ -9,28 +9,55 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), emoji: "😀")
+    func placeholder(in context: Context) -> TimeTableEntry {
+        TimeTableEntry(date: Date(), timeTable: [])
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), emoji: "😀")
+    func getSnapshot(in context: Context, completion: @escaping (TimeTableEntry) -> ()) {
+        let entry = TimeTableEntry(date: Date(), timeTable: [])
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        var entries: [TimeTableEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, emoji: "😀")
-            entries.append(entry)
-        }
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+        // FIXME: 0時過ぎの時刻表が取れない＆平日・土休日がズレる＆データの作りが急造
+
+        let dateFormmater = DateFormatter()
+        dateFormmater.dateFormat = "HH:mm"
+        dateFormmater.locale = Locale(identifier: "en_US_POSIX")
+
+        // 今日が平日か土休日か
+        let dayType: DayType = Calendar.current.isDateInWeekend(currentDate) ? .holidays : .weekdays
+
+        do {
+            // 平日か土休日かのデータをフィルタ
+            let targetData = try TimeTableDataManager().getTimeTableData()
+                .filter( { $0.dayType == dayType })
+
+            // 15分ごとにデータを作ってタイムライン用の配列に格納
+            for offset in 0 ..< 4 {
+                let entryDate = Calendar.current.date(byAdding: .minute, value: 15 * offset, to: currentDate)!
+                // 時刻表データでentryDateに近いものを最大3つピックアップ
+                var filteredTimeTable: [TimeTable] = []
+                for data in targetData {
+                    let timeTable = data.timeTable.filter( { dateFormmater.date(from: $0.departureTime)! > dateFormmater.date(from: dateFormmater.string(from: entryDate))! }).prefix(3)
+                    filteredTimeTable.append(TimeTable(station: data.station, railDirection: data.railDirection, dayType: data.dayType, timeTable: Array(timeTable)))
+                }
+                let entry = TimeTableEntry(date: entryDate, timeTable: filteredTimeTable)
+                entries.append(entry)
+            }
+
+            // entries分の表示が終わったら再度タイムライン用のデータを作る
+            let timeline = Timeline(entries: entries, policy: .atEnd)
+            completion(timeline)
+
+        } catch {
+            // TODO: エラーハンドリング
+        }
     }
 
 //    func relevances() async -> WidgetRelevances<Void> {
@@ -38,9 +65,9 @@ struct Provider: TimelineProvider {
 //    }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct TimeTableEntry: TimelineEntry {
     let date: Date
-    let emoji: String
+    let timeTable: [TimeTable]
 }
 
 struct TimeTableSampleWidgetsEntryView : View {
@@ -50,9 +77,6 @@ struct TimeTableSampleWidgetsEntryView : View {
         VStack {
             Text("Time:")
             Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
         }
     }
 }
@@ -79,6 +103,6 @@ struct TimeTableSampleWidgets: Widget {
 #Preview(as: .systemSmall) {
     TimeTableSampleWidgets()
 } timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
+    TimeTableEntry(date: .now, timeTable: [])
+    TimeTableEntry(date: .now, timeTable: [])
 }

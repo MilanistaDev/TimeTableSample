@@ -10,6 +10,15 @@
 		19E6AAB62D152E5700603813 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E6AAB52D152E5700603813 /* WidgetKit.framework */; };
 		19E6AAB82D152E5700603813 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E6AAB72D152E5700603813 /* SwiftUI.framework */; };
 		19E6AAC32D152E5900603813 /* TimeTableSampleWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 19E6AAB32D152E5700603813 /* TimeTableSampleWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		19E6AAD12D154E2D00603813 /* SelectableStations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47EF2D116E7500F4A84E /* SelectableStations.swift */; };
+		19E6AAD22D154E3500603813 /* DestinationStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA48022D12A9BC00F4A84E /* DestinationStation.swift */; };
+		19E6AAD32D154E3500603813 /* DayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47FC2D12A86800F4A84E /* DayType.swift */; };
+		19E6AAD42D154E3500603813 /* RailDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47FA2D12A83000F4A84E /* RailDirection.swift */; };
+		19E6AAD52D154E3500603813 /* TimeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47FE2D12A92400F4A84E /* TimeInfo.swift */; };
+		19E6AAD62D154E3500603813 /* TrainType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA48002D12A95100F4A84E /* TrainType.swift */; };
+		19E6AAD72D154E3500603813 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47F82D12A79500F4A84E /* TimeTable.swift */; };
+		19E6AAD82D154E5100603813 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA48092D12BBA400F4A84E /* APIError.swift */; };
+		19E6AAD92D154E5800603813 /* TimeTableDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA48382D13FBAA00F4A84E /* TimeTableDataManager.swift */; };
 		19EA47F22D116E7500F4A84E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EA47EA2D116E7500F4A84E /* Preview Assets.xcassets */; };
 		19EA47F32D116E7500F4A84E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EA47ED2D116E7500F4A84E /* Assets.xcassets */; };
 		19EA47F42D116E7500F4A84E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA47EE2D116E7500F4A84E /* ContentView.swift */; };
@@ -56,6 +65,7 @@
 		19E6AAB32D152E5700603813 /* TimeTableSampleWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TimeTableSampleWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E6AAB52D152E5700603813 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		19E6AAB72D152E5700603813 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		19E6AADA2D15509B00603813 /* TimeTableSampleWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeTableSampleWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		19EA47EA2D116E7500F4A84E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19EA47ED2D116E7500F4A84E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19EA47EE2D116E7500F4A84E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +128,7 @@
 		19C413292D0737CB00078CBA = {
 			isa = PBXGroup;
 			children = (
+				19E6AADA2D15509B00603813 /* TimeTableSampleWidgetsExtension.entitlements */,
 				19EA47F12D116E7500F4A84E /* TimeTableSample */,
 				19E6AAB92D152E5700603813 /* TimeTableSampleWidgets */,
 				19E6AAB42D152E5700603813 /* Frameworks */,
@@ -342,6 +353,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E6AAD22D154E3500603813 /* DestinationStation.swift in Sources */,
+				19E6AAD32D154E3500603813 /* DayType.swift in Sources */,
+				19E6AAD82D154E5100603813 /* APIError.swift in Sources */,
+				19E6AAD42D154E3500603813 /* RailDirection.swift in Sources */,
+				19E6AAD52D154E3500603813 /* TimeInfo.swift in Sources */,
+				19E6AAD62D154E3500603813 /* TrainType.swift in Sources */,
+				19E6AAD72D154E3500603813 /* TimeTable.swift in Sources */,
+				19E6AAD12D154E2D00603813 /* SelectableStations.swift in Sources */,
+				19E6AAD92D154E5800603813 /* TimeTableDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +570,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TimeTableSampleWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7M7ZGYSAKB;
@@ -578,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TimeTableSampleWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7M7ZGYSAKB;
