@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19A7E3EE2D161FE700AF008E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EA47ED2D116E7500F4A84E /* Assets.xcassets */; };
 		19E6AAB62D152E5700603813 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E6AAB52D152E5700603813 /* WidgetKit.framework */; };
 		19E6AAB82D152E5700603813 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E6AAB72D152E5700603813 /* SwiftUI.framework */; };
 		19E6AAC32D152E5900603813 /* TimeTableSampleWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 19E6AAB32D152E5700603813 /* TimeTableSampleWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -323,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A7E3EE2D161FE700AF008E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,8 @@
 //  Created by Takuya Aso on 2024/12/18.
 //
 
+import SwiftUI
+
 /// どこ行きかの終点情報(複数路線で該当駅がある場合があるのでケースを工夫)
 enum DestinationStation: String, Codable {
     case shibuya = "odpt.Station:TokyoMetro.Ginza.Shibuya"
@@ -21,6 +23,19 @@ enum DestinationStation: String, Codable {
 
         case .asakusa:
             "浅草"
+        }
+    }
+
+    var icon: Image {
+        switch self {
+        case .shibuya:
+            Image("G01")
+
+        case .ueno:
+            Image("G16")
+
+        case .asakusa:
+            Image("G19")
         }
     }
 }
