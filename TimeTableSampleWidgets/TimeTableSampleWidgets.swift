@@ -95,7 +95,9 @@ struct TimeTableSampleWidgets: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
+        .contentMarginsDisabled()
+        .supportedFamilies([.systemMedium])
+        .configurationDisplayName("Time Table")
         .description("This is an example widget.")
     }
 }
