@@ -171,9 +171,3 @@ struct TimeTableSampleWidgets: Widget {
     }
 }
 
-#Preview(as: .systemSmall) {
-    TimeTableSampleWidgets()
-} timeline: {
-    TimeTableEntry(date: .now, timeTable: [])
-    TimeTableEntry(date: .now, timeTable: [])
-}
