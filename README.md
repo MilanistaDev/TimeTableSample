@@ -34,6 +34,22 @@ See the link below.
 
 [https://developer.odpt.org](https://developer.odpt.org)
 
+
+Replace the obtained access token with "obtained access token" in the code below.  
+You will now be able to obtain the timetable data.
+
+取得したアクセストークンは下記コードの「取得したアクセストークン」と置き換えてください。  
+これで時刻表データが取得可能になります。
+
+```
+// MetroTimeTableWidget.swift
+
+struct APIQueries {
+    static let main = "?odpt:operator=odpt.Operator:TokyoMetro&odpt:station=odpt.Station:"
+    static let consumeKey = "&acl:consumerKey=[取得したアクセストークン]" // input access token
+}
+```
+
 ## Sample GIF and Images
 
 |Fetch and Save|Widgets|
