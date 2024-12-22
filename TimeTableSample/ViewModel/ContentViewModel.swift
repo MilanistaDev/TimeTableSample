@@ -11,6 +11,8 @@ import Foundation
 final class ContentViewModel: ObservableObject {
     @Published private(set) var timeTable: [TimeTable] = []
     @Published var storeCompleted = false
+    @Published private(set) var error: APIError?
+    @Published var isErrorPresented = false
 
     private let timeTableAPI = TimeTableAPI()
     private let timeTableManager = TimeTableDataManager()
@@ -40,6 +42,10 @@ private extension ContentViewModel {
 
             } catch {
                 print(error)
+                if let error = error as? APIError {
+                    self.error = error
+                    isErrorPresented = true
+                }
             }
         }
     }
