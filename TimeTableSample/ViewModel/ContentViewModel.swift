@@ -20,6 +20,10 @@ final class ContentViewModel: ObservableObject {
     func didTapTimeTableFetch(targetStation: SelectableStations) {
         fetchTimeTable(targetStation: targetStation)
     }
+
+    func didTapError() {
+        resetError()
+    }
 }
 
 private extension ContentViewModel {
@@ -48,5 +52,9 @@ private extension ContentViewModel {
                 }
             }
         }
+    }
+
+    func resetError() {
+        error = nil
     }
 }

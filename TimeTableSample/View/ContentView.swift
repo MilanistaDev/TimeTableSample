@@ -33,6 +33,7 @@ struct ContentView: View {
             isPresented: $viewModel.isErrorPresented,
             error: viewModel.error) {
                 Button("OK") {
+                    viewModel.didTapError()
                 }
             }
     }
