@@ -29,6 +29,14 @@ struct ContentView: View {
             "時刻表取得・保存が完了しました。",
             isPresented: $viewModel.storeCompleted
         ) { }
+        .alert(
+            isPresented: $viewModel.isErrorPresented,
+            error: viewModel.error
+        ) {
+            Button("OK") {
+                viewModel.didTapError()
+            }
+        }
     }
 }
 
